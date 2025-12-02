@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 Trivia Titans
 
-## Getting Started
+A modern, full-featured trivia game management system built with Next.js and Supabase. Track players, manage games, and analyze statistics with a beautiful, responsive interface.
 
-First, run the development server:
+## ✨ Features
 
+- **Player Management**: Add, track, and manage trivia players with autocomplete
+- **Game Tracking**: Record game results with detailed statistics
+- **Real-time Stats**: View comprehensive analytics and leaderboards
+- **Admin Dashboard**: Secure admin panel for game management
+- **Mobile Responsive**: Fully optimized for all device sizes
+- **Toast Notifications**: Clean, non-intrusive user feedback
+- **Dark Mode Support**: Modern UI with smooth animations
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Database**: Supabase (PostgreSQL)
+- **Styling**: Tailwind CSS v4
+- **UI Components**: Radix UI, Framer Motion
+- **Charts**: Recharts
+- **Language**: TypeScript
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ installed
+- Supabase account and project
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/YOUR_USERNAME/trivia-titans.git
+cd trivia-titans
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+Create a `.env.local` file in the root directory:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+ADMIN_PASSWORD=your_admin_password
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Set up the database:
+- Run the SQL migrations in the `supabase/migrations/` folder in your Supabase SQL editor
+- Optionally, run the seed data script to populate sample data
 
-## Learn More
+5. Run the development server:
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+trivia-titans/
+├── app/              # Next.js app directory (routes & pages)
+├── components/       # Reusable React components
+├── lib/             # Utility functions and Supabase client
+├── public/          # Static assets
+├── supabase/        # Database migrations and schema
+└── seed_data.ts     # Sample data for testing
+```
 
-## Deploy on Vercel
+## 🎮 Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Add Players**: Navigate to the admin panel to add new players
+2. **Record Games**: Track game results with player scores
+3. **View Stats**: Check leaderboards and player statistics
+4. **Manage Data**: Edit or delete games through the admin interface
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔒 Security
+
+- Admin routes protected with middleware
+- Environment variables for sensitive data
+- Supabase Row Level Security (RLS) policies
+
+## 📦 Build & Deploy
+
+Build for production:
+```bash
+npm run build
+```
+
+The app can be deployed to:
+- **Vercel** (recommended for Next.js)
+- **Netlify**
+- Any Node.js hosting platform
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+---
+
+Built with ❤️ using Next.js and Supabase
