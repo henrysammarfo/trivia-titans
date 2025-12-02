@@ -17,6 +17,9 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "Trivia Titans",
   description: "The ultimate trivia leaderboard for Malaga Trivia.",
+  icons: {
+    icon: "/assets/logo.jpg",
+  },
 };
 
 export default function RootLayout({
