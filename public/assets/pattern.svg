@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="361.24445mm"
+   height="338.66666mm"
+   viewBox="0 0 1280.0001 1199.9999"
+   id="svg4708"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="GreekKeyPattern.svg">
+  <defs
+     id="defs4710">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5237">
+      <path
+         style="opacity:0.49300005;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -189.9977,-1258.7708 1280.0001,0 0,1200.000057 -1280.0001,0 z"
+         id="path5239"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.55833335"
+     inkscape:cx="640"
+     inkscape:cy="599.99998"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:object-nodes="false"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:object-paths="false"
+     inkscape:snap-intersection-paths="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4713">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(189.9977,1258.7707)">
+    <g
+       id="g5181"
+       clip-path="url(#clipPath5237)">
+      <g
+         id="g5168">
+        <g
+           id="g5160">
+          <g
+             id="g5154">
+            <path
+               sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+               inkscape:connector-curvature="0"
+               id="path5106"
+               d="m 1180.0023,111.22942 0,-120.0000036 130,-9.02e-4 0,-19.9999954 -150,9e-4 0,120.000001 -100,0 0,-60.000006 20,0 0,40.000004 60,0 0,-99.999999 -300.00001,0 0,120.000001 -100,0 0,-60.000006 20,0 0,40.000004 60,0 0,-99.999999 -300,0 0,120.000001 -100,0 0,-60.000006 20,0 0,40.000004 60,0 0,-99.999999 -300,0 0,120.000001 -100,0 0,-60.000006 20,0 0,40.000004 60,0 0,-99.999999 -300,0 0,120.000001 -100,0 0,-60.000006 20,0 0,40.000004 60,0 0,-99.999999 -230,-9e-4 0,19.9999954 210,9.02e-4 0,59.9999996 -20,0 0,-40 -60,0 0,100.000004 139.999998,0 0,-120.0000036 260.000002,0 0,59.9999996 -20,0 0,-40 -60.000002,0 0,100.000004 140.000002,0 0,-120.0000036 260,0 0,59.9999996 -20,0 0,-40 -60,0 0,100.000004 140,0 0,-120.0000036 260,0 0,59.9999996 -20,0 0,-40 -60,0 0,100.000004 140,0 0,-120.0000036 260.00001,0 0,59.9999996 -20,0 0,-40 -60,0 0,100.000004 z"
+               style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+            <use
+               x="0"
+               y="0"
+               xlink:href="#path5106"
+               id="use5152"
+               transform="matrix(-1,0,0,-1,940.00459,-77.542084)"
+               width="100%"
+               height="100%" />
+          </g>
+          <use
+             height="100%"
+             width="100%"
+             transform="translate(160.00001,-200.00001)"
+             id="use5158"
+             xlink:href="#g5154"
+             y="0"
+             x="0" />
+        </g>
+        <use
+           x="0"
+           y="0"
+           xlink:href="#g5160"
+           id="use5166"
+           transform="translate(0,-400.00001)"
+           width="100%"
+           height="100%" />
+      </g>
+      <use
+         height="100%"
+         width="100%"
+         transform="translate(0,-800.00004)"
+         id="use5176"
+         xlink:href="#g5168"
+         y="0"
+         x="0" />
+    </g>
+  </g>
+</svg>

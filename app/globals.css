@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base Colors */
+  --background: #F5F5F0;
+  /* Marble White */
+  --foreground: #1A1A1A;
+  /* Obsidian */
+
+  /* Theme Colors */
+  --color-marble-white: #F5F5F0;
+  --color-marble-light: #EAEAE5;
+
+  --color-aegean-default: #004C6C;
+  --color-aegean-dark: #003349;
+  --color-aegean-light: #006691;
+
+  --color-gold-default: #C5A059;
+  --color-gold-light: #D4B475;
+  --color-gold-dark: #A38240;
+
+  --color-terracotta-default: #E07A5F;
+  --color-terracotta-dark: #C05A3F;
+
+  --color-obsidian-default: #1A1A1A;
+  --color-obsidian-dark: #0F0F0F;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Custom Colors */
+  --color-marble-white: var(--color-marble-white);
+  --color-marble-light: var(--color-marble-light);
+
+  --color-aegean: var(--color-aegean-default);
+  --color-aegean-dark: var(--color-aegean-dark);
+  --color-aegean-light: var(--color-aegean-light);
+
+  --color-gold: var(--color-gold-default);
+  --color-gold-light: var(--color-gold-light);
+  --color-gold-dark: var(--color-gold-dark);
+
+  --color-terracotta: var(--color-terracotta-default);
+  --color-terracotta-dark: var(--color-terracotta-dark);
+
+  --color-obsidian: var(--color-obsidian-default);
+  --color-obsidian-dark: var(--color-obsidian-dark);
+
+  /* Fonts */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Lato', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1A1A1A;
+    /* Obsidian */
+    --foreground: #F5F5F0;
+    /* Marble White */
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
 }
