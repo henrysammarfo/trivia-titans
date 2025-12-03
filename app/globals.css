@@ -8,16 +8,19 @@
   /* Obsidian */
 
   /* Theme Colors */
-  --color-marble-white: #F5F5F0;
-  --color-marble-light: #EAEAE5;
+  /* Theme Colors - Remapped for Malaga Branding (Red/Black) */
+  --color-marble-white: #FFFFFF;
+  --color-marble-light: #F5F5F5;
 
-  --color-aegean-default: #004C6C;
-  --color-aegean-dark: #003349;
-  --color-aegean-light: #006691;
+  /* Primary Brand Color (Red) - Replaces Aegean Blue */
+  --color-aegean-default: #E31C23;
+  --color-aegean-dark: #B71C1C;
+  --color-aegean-light: #FF5252;
 
-  --color-gold-default: #C5A059;
-  --color-gold-light: #D4B475;
-  --color-gold-dark: #A38240;
+  /* Secondary Brand Color (Black/Dark Gray) - Replaces Gold */
+  --color-gold-default: #1A1A1A;
+  --color-gold-light: #333333;
+  --color-gold-dark: #000000;
 
   --color-terracotta-default: #E07A5F;
   --color-terracotta-dark: #C05A3F;
@@ -49,7 +52,7 @@
   --color-obsidian-dark: var(--color-obsidian-dark);
 
   /* Fonts */
-  --font-heading: 'Cinzel', serif;
+  --font-heading: 'Oswald', sans-serif;
   --font-body: 'Lato', sans-serif;
 }
 

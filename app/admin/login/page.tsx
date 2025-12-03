@@ -7,8 +7,10 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { supabase } from '@/lib/supabase';
 import { Loader2, Lock } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function AdminLoginPage() {
+    const t = useTranslations('admin');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -57,13 +59,13 @@ export default function AdminLoginPage() {
                     <div className="mx-auto w-12 h-12 bg-aegean rounded-full flex items-center justify-center text-gold mb-2">
                         <Lock size={24} />
                     </div>
-                    <CardTitle className="text-3xl font-heading text-aegean-dark">Admin Portal</CardTitle>
-                    <CardDescription>Enter your credentials to manage the Titans.</CardDescription>
+                    <CardTitle className="text-3xl font-heading text-aegean-dark">{t('title')}</CardTitle>
+                    <CardDescription>{t('subtitle')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <form onSubmit={handleLogin} className="space-y-6">
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-obsidian">Email</label>
+                            <label className="text-sm font-medium text-obsidian">{t('email')}</label>
                             <Input
                                 type="email"
                                 placeholder="admin@malagatrivia.com"
@@ -74,7 +76,7 @@ export default function AdminLoginPage() {
                             />
                         </div>
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-obsidian">Password</label>
+                            <label className="text-sm font-medium text-obsidian">{t('password')}</label>
                             <Input
                                 type="password"
                                 placeholder="••••••••"
@@ -99,10 +101,10 @@ export default function AdminLoginPage() {
                             {isLoading ? (
                                 <>
                                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                    Signing in...
+                                    {t('signingIn')}
                                 </>
                             ) : (
-                                'Enter Olympus'
+                                t('enterOlympus')
                             )}
                         </Button>
                     </form>

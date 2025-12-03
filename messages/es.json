@@ -1,0 +1,87 @@
+{
+    "app": {
+        "title": "Titanes del Trivia",
+        "description": "La tabla de clasificación definitiva para Malaga Trivia"
+    },
+    "hero": {
+        "title": "Titanes del Trivia",
+        "subtitle": "Donde Compiten las Leyendas",
+        "description": "Sigue tu viaje de trivia y escala en las clasificaciones entre las mentes más brillantes de Málaga.",
+        "viewLeaderboard": "Ver Clasificación",
+        "howItWorks": "Cómo Funciona"
+    },
+    "stats": {
+        "totalPlayers": "Total Titanes",
+        "totalGames": "Juegos Jugados",
+        "avgScore": "Puntuación Media"
+    },
+    "leaderboard": {
+        "title": "Clasificación",
+        "subtitle": "El Salón de los Campeones",
+        "search": "Buscar un Titán...",
+        "minGames": "Juegos Mín:",
+        "sortAvg": "Ordenar: Prom. Puntos",
+        "sortTotal": "Ordenar: Puntos Totales",
+        "rank": "Rango",
+        "titan": "Titán",
+        "games": "Juegos",
+        "totalPts": "Puntos Totales",
+        "avgScore": "Prom. Puntos",
+        "noResults": "No se encontraron Titanes que coincidan con tus criterios.",
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "page": "Página",
+        "pantheon": "El Panteón",
+        "pantheonSubtitle": "Los mejores jugadores de todas las temporadas."
+    },
+    "admin": {
+        "title": "Portal de Administración",
+        "subtitle": "Gestionar los Titanes",
+        "login": "Iniciar Sesión",
+        "logout": "Cerrar Sesión",
+        "quizDate": "Fecha del Quiz",
+        "bulkEntry": "Entrada Masiva",
+        "playerName": "Nombre del Jugador",
+        "score": "Puntuación",
+        "addRow": "Añadir Fila",
+        "save": "Guardar Resultados",
+        "clear": "Limpiar",
+        "delete": "Eliminar",
+        "recentResults": "Resultados Recientes",
+        "date": "Fecha",
+        "player": "Jugador",
+        "actions": "Acciones",
+        "invalidScore": "Por favor ingrese una puntuación válida (0-40)",
+        "saveSuccess": "¡{count} resultados guardados exitosamente!",
+        "saveError": "Error al guardar resultados",
+        "deleteSuccess": "Resultado eliminado exitosamente",
+        "deleteError": "Error al eliminar resultado",
+        "enterOlympus": "Entrar al Olimpo",
+        "email": "Correo Electrónico",
+        "password": "Contraseña",
+        "signingIn": "Iniciando sesión...",
+        "loginError": "Error al iniciar sesión",
+        "saving": "Guardando...",
+        "noMatches": "Sin coincidencias",
+        "noRecentResults": "No hay resultados para esta fecha aún.",
+        "enterResults": "Ingresar Resultados del Quiz",
+        "confirmDelete": "¿Estás seguro de que quieres eliminar este resultado?"
+    },
+    "howItWorks": {
+        "title": "Cómo Funciona",
+        "step1Title": "Juega Trivia",
+        "step1Desc": "Únete a un equipo cada semana y compite por la gloria en nuestras legendarias noches de quiz.",
+        "step2Title": "Gana Puntos",
+        "step2Desc": "Escribe tu nombre en la hoja para seguir tu puntuación individual a través de las temporadas.",
+        "step3Title": "Asciende",
+        "step3Desc": "Revisa la clasificación para ver si te has convertido en un Titán entre mortales."
+    },
+    "footer": {
+        "builtWith": "Construido con",
+        "and": "y",
+        "description": "La batalla definitiva de ingenio en Málaga. Únete a nosotros cada semana para probar tu conocimiento y escalar los rangos del Olimpo.",
+        "quickLinks": "Enlaces Rápidos",
+        "contact": "Contacto",
+        "rights": "Todos los derechos reservados."
+    }
+}

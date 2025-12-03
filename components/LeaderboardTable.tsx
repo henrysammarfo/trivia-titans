@@ -8,6 +8,7 @@ import { Search, Filter, Trophy, Medal, ChevronDown, ChevronUp, LineChart, Crown
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { PlayerProgressGraph } from './PlayerProgressGraph';
+import { useTranslations } from 'next-intl';
 
 interface PlayerStats {
     id: string;
@@ -22,6 +23,7 @@ interface LeaderboardTableProps {
 }
 
 export function LeaderboardTable({ initialData }: LeaderboardTableProps) {
+    const t = useTranslations('leaderboard');
     const [search, setSearch] = useState('');
     const [minGames, setMinGames] = useState(0);
     const [sortBy, setSortBy] = useState<'average' | 'total'>('average');
@@ -71,7 +73,7 @@ export function LeaderboardTable({ initialData }: LeaderboardTableProps) {
                 <div className="relative w-full group">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 h-4 w-4 group-focus-within:text-aegean transition-colors" />
                     <Input
-                        placeholder="Search for a Titan..."
+                        placeholder={t('search')}
                         className="pl-10 bg-white border-stone-200 focus:border-aegean focus:ring-aegean/20 transition-all shadow-inner"
                         value={search}
                         onChange={(e) => { setSearch(e.target.value); setCurrentPage(1); }}
@@ -83,7 +85,7 @@ export function LeaderboardTable({ initialData }: LeaderboardTableProps) {
                     {/* Min Games Filter */}
                     <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-stone-200 shadow-sm">
                         <Filter className="h-4 w-4 text-aegean flex-shrink-0" />
-                        <span className="text-sm font-medium text-stone-600 whitespace-nowrap">Min Games:</span>
+                        <span className="text-sm font-medium text-stone-600 whitespace-nowrap">{t('minGames')}</span>
                         <Input
                             type="number"
                             min="0"
@@ -103,7 +105,7 @@ export function LeaderboardTable({ initialData }: LeaderboardTableProps) {
                             )}
                         >
                             <ArrowUpDown size={14} />
-                            Sort: Avg Score
+                            {t('sortAvg')}
                         </button>
                         <button
                             onClick={() => setSortBy('total')}
@@ -113,7 +115,7 @@ export function LeaderboardTable({ initialData }: LeaderboardTableProps) {
                             )}
                         >
                             <ArrowUpDown size={14} />
-                            Sort: Total Pts
+                            {t('sortTotal')}
                         </button>
                     </div>
                 </div>
@@ -124,11 +126,11 @@ export function LeaderboardTable({ initialData }: LeaderboardTableProps) {
                 <Table className="min-w-[600px]">
                     <TableHeader className="bg-aegean/5">
                         <TableRow className="hover:bg-transparent">
-                            <TableHead className="w-[100px] text-center font-heading font-bold text-aegean-dark">Rank</TableHead>
-                            <TableHead className="font-heading font-bold text-aegean-dark">Titan Name</TableHead>
-                            <TableHead className="text-right font-heading font-bold text-aegean-dark">Games</TableHead>
-                            <TableHead className="text-right font-heading font-bold text-aegean-dark">Total Pts</TableHead>
-                            <TableHead className="text-right font-heading font-bold text-aegean-dark">Avg Score</TableHead>
+                            <TableHead className="w-[100px] text-center font-heading font-bold text-aegean-dark">{t('rank')}</TableHead>
+                            <TableHead className="font-heading font-bold text-aegean-dark">{t('titan')}</TableHead>
+                            <TableHead className="text-right font-heading font-bold text-aegean-dark">{t('games')}</TableHead>
+                            <TableHead className="text-right font-heading font-bold text-aegean-dark">{t('totalPts')}</TableHead>
+                            <TableHead className="text-right font-heading font-bold text-aegean-dark">{t('avgScore')}</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -179,7 +181,7 @@ export function LeaderboardTable({ initialData }: LeaderboardTableProps) {
                         ) : (
                             <TableRow>
                                 <TableCell colSpan={5} className="h-24 text-center text-stone-500 italic">
-                                    No Titans found matching your criteria.
+                                    {t('noResults')}
                                 </TableCell>
                             </TableRow>
                         )}

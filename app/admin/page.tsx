@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Plus, Save, Trash2, LogOut, Loader2, Calendar } from 'lucide-react';
 import { toast } from 'sonner';
+import { useTranslations } from 'next-intl';
 
 interface ResultEntry {
     id: string;
@@ -16,6 +17,7 @@ interface ResultEntry {
 }
 
 export default function AdminDashboard() {
+    const t = useTranslations('admin');
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     const [quizDate, setQuizDate] = useState(new Date().toISOString().split('T')[0]);
@@ -56,7 +58,7 @@ export default function AdminDashboard() {
             // Escape to clear form
             if (e.key === 'Escape') {
                 setEntries([{ id: Math.random().toString(), name: '', score: '' }]);
-                toast.info('Form cleared');
+                toast.info(t('clear'));
             }
         };
 
@@ -81,7 +83,7 @@ export default function AdminDashboard() {
     }, [quizDate, isLoading]); // Refresh when date changes or after submit
 
     const deleteResult = async (id: string) => {
-        if (!confirm('Are you sure you want to delete this result?')) return;
+        if (!confirm(t('confirmDelete'))) return;
 
         console.log('Attempting to delete result with ID:', id);
 
@@ -89,11 +91,11 @@ export default function AdminDashboard() {
 
         if (error) {
             console.error('Delete error:', error);
-            toast.error(`Failed to delete: ${error.message}`);
+            toast.error(t('deleteError'));
         } else {
             console.log('Delete successful, data:', data);
             setRecentResults(recentResults.filter(r => r.id !== id));
-            toast.success('Result deleted successfully!');
+            toast.success(t('deleteSuccess'));
         }
     };
 
@@ -159,7 +161,7 @@ export default function AdminDashboard() {
 
                 const score = parseInt(entry.score);
                 if (isNaN(score) || score < 0 || score > 40) {
-                    toast.error(`Invalid score for ${entry.name}. Must be 0-40.`);
+                    toast.error(t('invalidScore'));
                     setIsLoading(false);
                     return;
                 }
@@ -198,11 +200,11 @@ export default function AdminDashboard() {
             }
 
             // Success - show toast
-            toast.success(`Saved ${entries.filter(e => e.name && e.score).length} results!`);
+            toast.success(t('saveSuccess', { count: entries.filter(e => e.name && e.score).length }));
             setEntries([{ id: Math.random().toString(), name: '', score: '' }]); // Reset form
         } catch (error: any) {
             console.error('Error saving results:', error);
-            toast.error(`Failed to save: ${error.message}`);
+            toast.error(t('saveError'));
         } finally {
             setIsLoading(false);
         }
@@ -218,10 +220,10 @@ export default function AdminDashboard() {
             <div className="max-w-4xl mx-auto space-y-8">
                 {/* Header */}
                 <div className="flex items-center justify-between">
-                    <h1 className="text-3xl font-heading font-bold text-aegean-dark">Admin Dashboard</h1>
+                    <h1 className="text-3xl font-heading font-bold text-aegean-dark">{t('title')}</h1>
                     <Button variant="outline" onClick={handleLogout} className="text-terracotta border-terracotta/30 hover:bg-terracotta/10">
                         <LogOut className="mr-2 h-4 w-4" />
-                        Sign Out
+                        {t('logout')}
                     </Button>
                 </div>
 
@@ -231,12 +233,12 @@ export default function AdminDashboard() {
                         <CardHeader className="bg-white border-b border-gold/10">
                             <CardTitle className="flex items-center gap-2 text-aegean-dark">
                                 <Calendar className="h-5 w-5 text-aegean" />
-                                Enter Quiz Results
+                                {t('enterResults')}
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="p-6 space-y-6">
                             <div className="flex items-center gap-4">
-                                <label className="font-medium text-obsidian whitespace-nowrap">Quiz Date:</label>
+                                <label className="font-medium text-obsidian whitespace-nowrap">{t('quizDate')}:</label>
                                 <Input
                                     type="date"
                                     value={quizDate}
@@ -247,8 +249,8 @@ export default function AdminDashboard() {
 
                             <div className="space-y-3">
                                 <div className="grid grid-cols-12 gap-4 font-medium text-sm text-stone-500 uppercase tracking-wider px-2">
-                                    <div className="col-span-7">Player Name</div>
-                                    <div className="col-span-3">Score (/40)</div>
+                                    <div className="col-span-7">{t('playerName')}</div>
+                                    <div className="col-span-3">{t('score')} (/40)</div>
                                     <div className="col-span-2"></div>
                                 </div>
 
@@ -284,7 +286,7 @@ export default function AdminDashboard() {
                                                         ))
                                                     }
                                                     {suggestions.filter(s => s.toLowerCase().startsWith(entry.name.toLowerCase())).length === 0 && (
-                                                        <div className="px-3 py-2 text-stone-400 italic text-sm">No matches</div>
+                                                        <div className="px-3 py-2 text-stone-400 italic text-sm">{t('noMatches')}</div>
                                                     )}
                                                 </div>
                                             )}
@@ -325,23 +327,23 @@ export default function AdminDashboard() {
                             <div className="flex items-center justify-between pt-6 border-t border-stone-100">
                                 <Button variant="outline" onClick={addRow} className="text-aegean border-aegean/30 hover:bg-aegean/5">
                                     <Plus className="mr-2 h-4 w-4" />
-                                    Add Row
+                                    {t('addRow')}
                                 </Button>
 
                                 <Button
                                     onClick={handleSubmit}
                                     disabled={isLoading}
-                                    className="bg-gold hover:bg-gold-dark text-obsidian min-w-[150px]"
+                                    className="bg-gold hover:bg-gold-dark text-white min-w-[150px]"
                                 >
                                     {isLoading ? (
                                         <>
                                             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                            Saving...
+                                            {t('saving')}
                                         </>
                                     ) : (
                                         <>
                                             <Save className="mr-2 h-4 w-4" />
-                                            Save Results
+                                            {t('save')}
                                         </>
                                     )}
                                 </Button>
@@ -354,22 +356,22 @@ export default function AdminDashboard() {
                         <CardHeader className="bg-white border-b border-gold/10">
                             <CardTitle className="flex items-center gap-2 text-aegean-dark">
                                 <Calendar className="h-5 w-5 text-aegean" />
-                                Recent Entries ({quizDate})
+                                {t('recentResults')} ({quizDate})
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="p-0">
                             <div className="max-h-[500px] overflow-y-auto">
                                 {recentResults.length === 0 ? (
                                     <div className="p-8 text-center text-stone-500 italic">
-                                        No results entered for this date yet.
+                                        {t('noRecentResults')}
                                     </div>
                                 ) : (
                                     <table className="w-full">
                                         <thead className="bg-white sticky top-0">
                                             <tr className="text-left text-xs font-bold text-stone-500 uppercase tracking-wider border-b border-stone-200">
-                                                <th className="px-4 py-3">Player</th>
-                                                <th className="px-4 py-3 text-right">Score</th>
-                                                <th className="px-4 py-3 text-right">Action</th>
+                                                <th className="px-4 py-3">{t('player')}</th>
+                                                <th className="px-4 py-3 text-right">{t('score')}</th>
+                                                <th className="px-4 py-3 text-right">{t('actions')}</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y divide-stone-100">

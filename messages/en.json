@@ -1,0 +1,87 @@
+{
+    "app": {
+        "title": "Trivia Titans",
+        "description": "The ultimate trivia leaderboard for Malaga Trivia"
+    },
+    "hero": {
+        "title": "Trivia Titans",
+        "subtitle": "Where Legends Compete",
+        "description": "Track your trivia journey and climb the ranks among Malaga's finest minds.",
+        "viewLeaderboard": "View Leaderboard",
+        "howItWorks": "How It Works"
+    },
+    "stats": {
+        "totalPlayers": "Total Titans",
+        "totalGames": "Games Played",
+        "avgScore": "Average Score"
+    },
+    "leaderboard": {
+        "title": "Leaderboard",
+        "subtitle": "The Hall of Champions",
+        "search": "Search for a Titan...",
+        "minGames": "Min Games:",
+        "sortAvg": "Sort: Avg Score",
+        "sortTotal": "Sort: Total Pts",
+        "rank": "Rank",
+        "titan": "Titan",
+        "games": "Games",
+        "totalPts": "Total Pts",
+        "avgScore": "Avg Score",
+        "noResults": "No Titans found matching your criteria.",
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page",
+        "pantheon": "The Pantheon",
+        "pantheonSubtitle": "Top performing players from all seasons."
+    },
+    "admin": {
+        "title": "Admin Portal",
+        "subtitle": "Manage the Titans",
+        "login": "Login",
+        "logout": "Logout",
+        "quizDate": "Quiz Date",
+        "bulkEntry": "Bulk Entry",
+        "playerName": "Player Name",
+        "score": "Score",
+        "addRow": "Add Row",
+        "save": "Save Results",
+        "clear": "Clear",
+        "delete": "Delete",
+        "recentResults": "Recent Results",
+        "date": "Date",
+        "player": "Player",
+        "actions": "Actions",
+        "invalidScore": "Please enter a valid score (0-40)",
+        "saveSuccess": "Saved {count} results successfully!",
+        "saveError": "Error saving results",
+        "deleteSuccess": "Result deleted successfully",
+        "deleteError": "Error deleting result",
+        "enterOlympus": "Enter Olympus",
+        "email": "Email",
+        "password": "Password",
+        "signingIn": "Signing in...",
+        "loginError": "Failed to sign in",
+        "saving": "Saving...",
+        "noMatches": "No matches",
+        "noRecentResults": "No results entered for this date yet.",
+        "enterResults": "Enter Quiz Results",
+        "confirmDelete": "Are you sure you want to delete this result?"
+    },
+    "howItWorks": {
+        "title": "How It Works",
+        "step1Title": "Play Trivia",
+        "step1Desc": "Join a team every week and compete for glory in our legendary quiz nights.",
+        "step2Title": "Earn Points",
+        "step2Desc": "Write your name on the sheet to track your individual score across seasons.",
+        "step3Title": "Rise Up",
+        "step3Desc": "Check the leaderboard to see if you've become a Titan among mortals."
+    },
+    "footer": {
+        "builtWith": "Built with",
+        "and": "and",
+        "description": "The ultimate battle of wits in Malaga. Join us every week to test your knowledge and climb the ranks of Olympus.",
+        "quickLinks": "Quick Links",
+        "contact": "Contact",
+        "rights": "All rights reserved."
+    }
+}
