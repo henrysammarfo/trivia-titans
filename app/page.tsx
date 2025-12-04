@@ -111,9 +111,9 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-white">
           {/* Background Image - Using the Titan image */}
-          <div className="absolute inset-0 bg-white">
+          <div className="absolute inset-0">
             <Image
               src="/assets/titan-hero.jpg"
               alt="Titan Hero"
@@ -123,8 +123,8 @@ export default function Home() {
             />
           </div>
 
-          {/* Very light overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-white/15" />
+          {/* 50% white overlay for text readability */}
+          <div className="absolute inset-0 bg-white/50" />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
