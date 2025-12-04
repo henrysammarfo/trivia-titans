@@ -112,48 +112,41 @@ export default function Home() {
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-          {/* Background Image - Using the Statue/Titan image */}
-          <div className="absolute inset-0">
+          {/* Background Image - Using the Titan image */}
+          <div className="absolute inset-0 bg-white">
             <Image
-              src="/assets/statue.jpg"
+              src="/assets/titan-hero.jpg"
               alt="Titan Hero"
               fill
-              className="object-cover object-top"
+              className="object-contain object-center"
               priority
             />
           </div>
 
-          {/* Overlay Gradient - Lighter/Golden to ensure text readability over the statue */}
-          <div className="absolute inset-0 bg-gradient-to-b from-marble-white/90 via-marble-white/60 to-marble-white" />
+          {/* Very light overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-white/15" />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10"
+            className="relative z-10 text-center px-4 max-w-4xl mx-auto"
           >
-            {/* Laurel Wreath Decoration */}
-            <div className="flex justify-center mb-4">
-              <div className="relative w-16 h-16 opacity-80">
-                <Image src="/assets/laurel.jpg" alt="Laurel" fill className="object-contain mix-blend-multiply" />
-              </div>
-            </div>
-
-            <h1 className="font-heading text-4xl md:text-8xl font-bold text-aegean-dark mb-6 drop-shadow-sm tracking-tight">
+            <h1 className="font-heading text-4xl md:text-7xl font-bold text-aegean-dark mb-4 tracking-tight" style={{ textShadow: '2px 2px 4px rgba(255,255,255,0.9), -1px -1px 2px rgba(255,255,255,0.9)' }}>
               {t('hero.title')}
             </h1>
-            <p className="text-lg md:text-2xl text-aegean/80 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base md:text-xl text-aegean-dark font-bold mb-8 max-w-2xl mx-auto leading-relaxed" style={{ textShadow: '1px 1px 3px rgba(255,255,255,0.9), -1px -1px 2px rgba(255,255,255,0.9)' }}>
               {t('hero.description')}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="#leaderboard">
-                <Button size="lg" className="w-full sm:w-auto text-lg px-10 py-6 bg-aegean hover:bg-aegean-dark text-white shadow-xl hover:shadow-2xl transition-all">
+                <Button size="lg" className="w-full sm:w-auto text-base md:text-lg px-8 py-5 bg-aegean hover:bg-aegean-dark text-white shadow-xl hover:shadow-2xl transition-all">
                   {t('hero.viewLeaderboard')}
                 </Button>
               </Link>
               <Link href="#about">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-10 py-6 border-aegean/30 text-aegean hover:bg-aegean/5 backdrop-blur-sm">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base md:text-lg px-8 py-5 border-aegean/30 text-aegean hover:bg-aegean/5 bg-white/80">
                   {t('hero.howItWorks')}
                 </Button>
               </Link>
